@@ -21,24 +21,22 @@ class WizardTest < Minitest::Test
 
   def test_is_not_always_bearded
 
-    wizard = Wizard.new("Valerie", bearded= false)
+    wizard = Wizard.new("Valerie", bearded: false)
     refute wizard.bearded?
   end
 
   def test_has_root_powers
-    skip
-    wizard = Wizard.new("Sarah")
+    wizard = Wizard.new("Sarah", bearded:  false )
     assert_equal "sudo chown ~/bin", wizard.incantation("chown ~/bin")
   end
 
   def test_has_lots_of_root_powers
-    skip
-    wizard = Wizard.new("Rob")
+    wizard = Wizard.new("Rob", bearded: false)
     assert_equal "sudo rm -rf /home/mirandax", wizard.incantation("rm -rf /home/mirandax")
   end
 
   def test_starts_rested
-    skip
+
      wizard = Wizard.new("Sarah", bearded: false)
     assert_equal true, wizard.rested?
     # create wizard

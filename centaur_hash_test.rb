@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'centaur_hash'
+require_relative 'centaur_hash2'
 
 class CentaurTest < Minitest::Test
   def test_it_has_a_name

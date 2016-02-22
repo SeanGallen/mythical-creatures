@@ -28,17 +28,15 @@ class HobbitTest < Minitest::Test
   end
 
   def test_grows_older_when_celebrating_birthdays
-    skip
     hobbit = Hobbit.new('Meriadoc')
     assert_equal 0, hobbit.age
     5.times do
-      hobbit.celebrate_birthday
+     hobbit.celebrate_birthday
     end
     assert_equal 5, hobbit.age
   end
 
   def test_is_considered_a_child_at_32
-    skip
     hobbit = Hobbit.new('Gerontius')
     32.times do
       hobbit.celebrate_birthday
@@ -47,7 +45,6 @@ class HobbitTest < Minitest::Test
   end
 
   def test_comes_of_age_at_33
-     skip
     hobbit = Hobbit.new('Otho')
     33.times do
       hobbit.celebrate_birthday

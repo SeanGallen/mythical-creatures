@@ -31,7 +31,6 @@ class PirateTest < Minitest::Test
   end
 
   def test_becomes_cursed_after_enough_heinous_acts
-    skip
     pirate = Pirate.new("Jack")
     refute pirate.cursed?
     pirate.commit_heinous_act
@@ -48,19 +47,14 @@ class PirateTest < Minitest::Test
   end
 
   def test_a_pirate_has_booty
-    # create a pirate
-    # pirate starts with 0 booty
     pirate = Pirate.new("Roger")
     assert_equal 0, pirate.booty
   end
 
   def test_a_pirate_gets_100_booty_for_robbon
-    # create a pirate
     pirate = Pirate.new("Moragn")
     pirate.robs_ships
     assert_equal 100, pirate.booty
-    # pirate robs ship
-    # check pirate has 100 booty
   end
 
 end

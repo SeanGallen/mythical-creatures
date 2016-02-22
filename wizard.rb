@@ -1,5 +1,5 @@
 class Wizard
-    def initialize (name, bearded= true)
+    def initialize (name, bearded: true)
       @name = name
       @bearded = bearded
     end
@@ -13,11 +13,7 @@ class Wizard
      @bearded
     end
   def incantation(x)
-    if x = "chown ~/bin"
-      puts "sudo chown ~/bin"
-    elsif "rm -rf /home/mirandax"
-      puts "sudo rm -rf /home/mirandax"
-    end
+   "sudo #{x}"
   end
   def rested?
     true
